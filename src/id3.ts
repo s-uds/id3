@@ -1,7 +1,7 @@
-import {ID3Tag, parse} from './id3Tag.js';
-import {BrowserFileReader} from './browserFileReader.js';
-import {RemoteReader} from './remoteReader.js';
-import {Reader} from './reader.js';
+import {ID3Tag, parse} from './id3Tag';
+import {BrowserFileReader} from './browserFileReader';
+import {RemoteReader} from './remoteReader';
+import {Reader} from './reader';
 
 const SUPPORTS_FILE =
   typeof window !== 'undefined' &&
@@ -30,7 +30,7 @@ export async function fromReader(reader: Reader): Promise<ID3Tag | null> {
  * @return {Promise<ID3Tag>}
  */
 export async function fromPath(path: string): Promise<ID3Tag | null> {
-  const mod = await import('./localReader.js');
+  const mod = await import('./localReader');
   return fromReader(new mod.LocalReader(path));
 }
 

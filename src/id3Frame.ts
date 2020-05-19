@@ -1,5 +1,5 @@
-import genres from './genres.js';
-import {getString, getUint24, getUint32Synch, getStringUtf16} from './util.js';
+import genres from './genres';
+import {getString, getUint24, getUint32Synch, getStringUtf16} from './util';
 
 export interface ID3Frame {
   tag: string | null;

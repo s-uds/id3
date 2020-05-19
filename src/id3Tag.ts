@@ -1,7 +1,7 @@
-import {Reader} from './reader.js';
-import {parse as parseFrame, ID3Frame, ImageValue} from './id3Frame.js';
-import {getString, getUint32Synch, getUint24} from './util.js';
-import genres from './genres.js';
+import {Reader} from './reader';
+import {parse as parseFrame, ID3Frame, ImageValue} from './id3Frame';
+import {getString, getUint32Synch, getUint24} from './util';
+import genres from './genres';
 
 export interface ID3Tag {
   title: string | null;

@@ -1,4 +1,4 @@
-import {Reader} from './reader.js';
+import {Reader} from './reader';
 
 /**
  * Reads a `File` instance
